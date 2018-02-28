@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.himanshu.dailyexpense">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".CatalogAcitvity"
+            android:label="Daily Expense Manager"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EditorActivity"
+            android:label="EditorActivity" />
+
+        <provider
+            android:name=".data.ExpenseProvider"
+            android:authorities="com.example.himanshu.dailyexpense"
+            android:exported="false" />
+
+        <activity
+            android:name=".DailyExpense"
+            android:label="@string/title_activity_daily_expense"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NewExpense"
+            android:label="NewExpense"></activity>
+    </application>
+
+</manifest>
